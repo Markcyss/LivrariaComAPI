@@ -1,0 +1,17 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: solid 5px;
+    .titulo {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 16px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: black;
+    }
+}

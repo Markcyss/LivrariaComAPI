@@ -6,8 +6,15 @@ const endpoints = Router();
 const autenticador = getAuthentication();
 
 endpoints.get('/livros', autenticador, async (req, resp) => {
-    let consultar = await repoLivros.checarLivros();
-    resp.send(consultar);
+    try {
+        let consultar = await repoLivros.checarLivros();
+        resp.send(consultar);
+    }
+    catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
 })
 
 export default endpoints;

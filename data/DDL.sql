@@ -1,4 +1,10 @@
+-- Data Definition Language
+-- Usado para criações, tanto do banco quanto de tabelas.
+
+drop database if exists livrariabd;
+
 create database livrariabd;
+
 use livrariabd;
 
 create table login (
